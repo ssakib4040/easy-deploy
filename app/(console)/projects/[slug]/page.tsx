@@ -17,7 +17,9 @@ type ProjectDetailsPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export default async function ProjectDetailsPage({ params }: ProjectDetailsPageProps) {
+export default async function ProjectDetailsPage({
+  params,
+}: ProjectDetailsPageProps) {
   const { slug } = await params;
 
   return (
@@ -35,15 +37,21 @@ export default async function ProjectDetailsPage({ params }: ProjectDetailsPageP
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <p className="mb-2 text-sm text-muted-foreground">Build success ratio</p>
+              <p className="mb-2 text-sm text-muted-foreground">
+                Build success ratio
+              </p>
               <Progress value={93} className="h-2" />
             </div>
             <div>
-              <p className="mb-2 text-sm text-muted-foreground">Canary error budget</p>
+              <p className="mb-2 text-sm text-muted-foreground">
+                Canary error budget
+              </p>
               <Progress value={78} className="h-2" />
             </div>
             <div>
-              <p className="mb-2 text-sm text-muted-foreground">Coverage confidence</p>
+              <p className="mb-2 text-sm text-muted-foreground">
+                Coverage confidence
+              </p>
               <Progress value={88} className="h-2" />
             </div>
           </CardContent>
@@ -54,9 +62,18 @@ export default async function ProjectDetailsPage({ params }: ProjectDetailsPageP
             <CardTitle>Routing and Security</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm">
-            <p className="flex items-center gap-2"><Globe className="h-4 w-4 text-primary" /> Edge acceleration enabled</p>
-            <p className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" /> TLS and policy active</p>
-            <p className="flex items-center gap-2"><Timer className="h-4 w-4 text-primary" /> Last deploy 11 minutes ago</p>
+            <p className="flex items-center gap-2">
+              <Globe className="h-4 w-4 text-primary" /> Edge acceleration
+              enabled
+            </p>
+            <p className="flex items-center gap-2">
+              <ShieldCheck className="h-4 w-4 text-primary" /> TLS and policy
+              active
+            </p>
+            <p className="flex items-center gap-2">
+              <Timer className="h-4 w-4 text-primary" /> Last deploy 11 minutes
+              ago
+            </p>
           </CardContent>
         </Card>
       </section>
@@ -81,14 +98,23 @@ export default async function ProjectDetailsPage({ params }: ProjectDetailsPageP
         <Card className="border-border/70 bg-card/90">
           <CardHeader className="flex flex-row items-center justify-between gap-3">
             <CardTitle>Environment and Secrets (Project Scoped)</CardTitle>
-            <MockActionDialog label="Add Variable" entity={slug} className="rounded-full px-4" />
+            <MockActionDialog
+              label="Add Variable"
+              entity={slug}
+              className="rounded-full px-4"
+            />
           </CardHeader>
           <CardContent className="space-y-2">
             {projectVars.map((variable) => (
-              <div key={variable.key} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border/70 bg-background p-3 text-sm">
+              <div
+                key={variable.key}
+                className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border/70 bg-background p-3 text-sm"
+              >
                 <div>
                   <p className="font-medium">{variable.key}</p>
-                  <p className="text-xs text-muted-foreground">Scope: {variable.scope}</p>
+                  <p className="text-xs text-muted-foreground">
+                    Scope: {variable.scope}
+                  </p>
                 </div>
                 <Badge variant="outline" className="rounded-full px-3">
                   {variable.visibility}

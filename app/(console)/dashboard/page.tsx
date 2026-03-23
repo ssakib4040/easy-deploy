@@ -35,7 +35,11 @@ export default function DashboardPage() {
         <StatCard title="Applications Live" value="18" hint="+3 this week" />
         <StatCard title="Deploy Success" value="99.3%" hint="Last 30 days" />
         <StatCard title="Avg Build Time" value="2m 41s" hint="-18s trend" />
-        <StatCard title="Requests / min" value="142k" hint="Across all services" />
+        <StatCard
+          title="Requests / min"
+          value="142k"
+          hint="Across all services"
+        />
       </section>
 
       <section className="mt-4 grid gap-4 xl:grid-cols-[2fr_1fr]">
@@ -46,11 +50,17 @@ export default function DashboardPage() {
           <CardContent>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-7">
               {chartDays.map(([day, value]) => (
-                <div key={day} className="rounded-xl border border-border/70 bg-muted/30 p-3">
+                <div
+                  key={day}
+                  className="rounded-xl border border-border/70 bg-muted/30 p-3"
+                >
                   <p className="text-xs text-muted-foreground">{day}</p>
                   <p className="text-lg font-semibold">{value}</p>
                   <div className="mt-2 h-1.5 rounded-full bg-muted">
-                    <div className="h-1.5 rounded-full bg-primary" style={{ width: `${Math.min(100, value)}%` }} />
+                    <div
+                      className="h-1.5 rounded-full bg-primary"
+                      style={{ width: `${Math.min(100, value)}%` }}
+                    />
                   </div>
                 </div>
               ))}

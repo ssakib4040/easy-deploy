@@ -111,7 +111,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     const applyTheme = () => {
-      const resolvedTheme = theme === "system" ? (mediaQuery.matches ? "dark" : "light") : theme;
+      const resolvedTheme =
+        theme === "system" ? (mediaQuery.matches ? "dark" : "light") : theme;
       root.classList.toggle("dark", resolvedTheme === "dark");
       root.style.colorScheme = resolvedTheme;
     };
@@ -137,20 +138,31 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   }
 
   function markAllNotificationsRead() {
-    setNotifications((prev) => prev.map((item) => ({ ...item, unread: false })));
+    setNotifications((prev) =>
+      prev.map((item) => ({ ...item, unread: false })),
+    );
   }
 
   return (
     <SidebarProvider>
-      <Sidebar collapsible="icon" variant="inset" className="border-r border-sidebar-border/70">
+      <Sidebar
+        collapsible="icon"
+        variant="inset"
+        className="border-r border-sidebar-border/70"
+      >
         <SidebarHeader>
-          <Link href="/dashboard" className="flex items-center gap-2 rounded-lg px-2 py-1.5">
+          <Link
+            href="/dashboard"
+            className="flex items-center gap-2 rounded-lg px-2 py-1.5"
+          >
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-semibold text-primary-foreground">
               ED
             </span>
             <div className="grid flex-1 text-left leading-tight group-data-[collapsible=icon]:hidden">
               <span className="text-sm font-semibold">EasyDeploy</span>
-              <span className="text-xs text-muted-foreground">Modern deployment control plane</span>
+              <span className="text-xs text-muted-foreground">
+                Modern deployment control plane
+              </span>
             </div>
           </Link>
         </SidebarHeader>
@@ -162,10 +174,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <SidebarGroupLabel>Platform</SidebarGroupLabel>
             <SidebarMenu>
               {platform.map((item) => {
-                const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+                const active =
+                  pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`);
                 return (
                   <SidebarMenuItem key={item.href}>
-                    <SidebarMenuButton asChild isActive={active} tooltip={item.label}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={active}
+                      tooltip={item.label}
+                    >
                       <Link href={item.href}>
                         <item.icon />
                         <span>{item.label}</span>
@@ -181,10 +199,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <SidebarGroupLabel>Workspace</SidebarGroupLabel>
             <SidebarMenu>
               {workspace.map((item) => {
-                const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+                const active =
+                  pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`);
                 return (
                   <SidebarMenuItem key={item.href}>
-                    <SidebarMenuButton asChild isActive={active} tooltip={item.label}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={active}
+                      tooltip={item.label}
+                    >
                       <Link href={item.href}>
                         <item.icon />
                         <span>{item.label}</span>
@@ -200,7 +224,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <SidebarFooter>
           <div className="rounded-lg border border-border/70 bg-muted/30 p-3 text-xs text-muted-foreground group-data-[collapsible=icon]:hidden">
             <p className="font-medium text-foreground">Prototype Mode</p>
-            <p className="mt-1">Frontend only. All values are sample placeholders.</p>
+            <p className="mt-1">
+              Frontend only. All values are sample placeholders.
+            </p>
           </div>
         </SidebarFooter>
       </Sidebar>
@@ -225,7 +251,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <div className="ml-auto flex items-center gap-2">
               <div className="relative hidden md:block">
                 <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
-                <Input placeholder="Search projects, logs, domains" className="h-9 w-64 rounded-full pl-8" />
+                <Input
+                  placeholder="Search projects, logs, domains"
+                  className="h-9 w-64 rounded-full pl-8"
+                />
               </div>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -257,17 +286,28 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                         onSelect={() => markNotificationRead(item.id)}
                         className="flex items-start gap-2 py-2"
                       >
-                        <div className="mt-1 h-2 w-2 rounded-full bg-primary/75 data-[read=true]:bg-transparent" data-read={!item.unread} />
+                        <div
+                          className="mt-1 h-2 w-2 rounded-full bg-primary/75 data-[read=true]:bg-transparent"
+                          data-read={!item.unread}
+                        />
                         <div className="min-w-0 flex-1">
-                          <p className="truncate text-sm font-medium text-foreground">{item.title}</p>
-                          <p className="truncate text-xs text-muted-foreground">{item.detail}</p>
-                          <p className="text-xs text-muted-foreground/80">{item.time}</p>
+                          <p className="truncate text-sm font-medium text-foreground">
+                            {item.title}
+                          </p>
+                          <p className="truncate text-xs text-muted-foreground">
+                            {item.detail}
+                          </p>
+                          <p className="text-xs text-muted-foreground/80">
+                            {item.time}
+                          </p>
                         </div>
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem onSelect={markAllNotificationsRead}>Mark all as read</DropdownMenuItem>
+                  <DropdownMenuItem onSelect={markAllNotificationsRead}>
+                    Mark all as read
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <Badge variant="outline" className="rounded-full px-3">
@@ -275,7 +315,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </Badge>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="h-auto rounded-full p-0 hover:bg-transparent">
+                  <Button
+                    variant="ghost"
+                    className="h-auto rounded-full p-0 hover:bg-transparent"
+                  >
                     <Avatar className="h-8 w-8 border border-border/70">
                       <AvatarFallback>{signedIn ? "SS" : "GU"}</AvatarFallback>
                     </Avatar>
@@ -284,7 +327,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 <DropdownMenuContent align="end" className="w-56">
                   <DropdownMenuLabel>
                     <p className="text-sm font-medium">Sakib (Demo)</p>
-                    <p className="text-xs text-muted-foreground">owner@easydeploy.dev</p>
+                    <p className="text-xs text-muted-foreground">
+                      owner@easydeploy.dev
+                    </p>
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuGroup>
@@ -296,7 +341,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     </DropdownMenuItem>
                     <DropdownMenuSub>
                       <DropdownMenuSubTrigger>
-                        {theme === "dark" ? <Moon className="mr-2 h-4 w-4" /> : <Sun className="mr-2 h-4 w-4" />}
+                        {theme === "dark" ? (
+                          <Moon className="mr-2 h-4 w-4" />
+                        ) : (
+                          <Sun className="mr-2 h-4 w-4" />
+                        )}
                         Theme
                       </DropdownMenuSubTrigger>
                       <DropdownMenuSubContent>
@@ -308,18 +357,28 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                             }
                           }}
                         >
-                          <DropdownMenuRadioItem value="system">System</DropdownMenuRadioItem>
-                          <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>
-                          <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
+                          <DropdownMenuRadioItem value="system">
+                            System
+                          </DropdownMenuRadioItem>
+                          <DropdownMenuRadioItem value="light">
+                            Light
+                          </DropdownMenuRadioItem>
+                          <DropdownMenuRadioItem value="dark">
+                            Dark
+                          </DropdownMenuRadioItem>
                         </DropdownMenuRadioGroup>
                       </DropdownMenuSubContent>
                     </DropdownMenuSub>
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
                   {signedIn ? (
-                    <DropdownMenuItem onSelect={() => setSignedIn(false)}>Sign out (demo)</DropdownMenuItem>
+                    <DropdownMenuItem onSelect={() => setSignedIn(false)}>
+                      Sign out (demo)
+                    </DropdownMenuItem>
                   ) : (
-                    <DropdownMenuItem onSelect={() => setSignedIn(true)}>Sign in (demo)</DropdownMenuItem>
+                    <DropdownMenuItem onSelect={() => setSignedIn(true)}>
+                      Sign in (demo)
+                    </DropdownMenuItem>
                   )}
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -328,7 +387,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </header>
 
         <main className="flex-1 p-4 md:p-6">
-          <div className="rounded-2xl border border-border/70 bg-background/85 p-4 shadow-sm md:p-6">{children}</div>
+          <div className="rounded-2xl border border-border/70 bg-background/85 p-4 shadow-sm md:p-6">
+            {children}
+          </div>
         </main>
       </SidebarInset>
     </SidebarProvider>

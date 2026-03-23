@@ -8,12 +8,48 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const apps = [
-  { name: "storefront-web", stack: "Next.js 16", branch: "main", status: "Live", slug: "storefront-web" },
-  { name: "billing-api", stack: "Node + Fastify", branch: "release", status: "Live", slug: "billing-api" },
-  { name: "worker-ingestion", stack: "Python", branch: "staging", status: "Deploying", slug: "worker-ingestion" },
-  { name: "docs-site", stack: "Astro", branch: "main", status: "Queued", slug: "docs-site" },
-  { name: "support-backoffice", stack: "React", branch: "dev", status: "Paused", slug: "support-backoffice" },
-  { name: "webhook-gateway", stack: "Go", branch: "main", status: "Live", slug: "webhook-gateway" },
+  {
+    name: "storefront-web",
+    stack: "Next.js 16",
+    branch: "main",
+    status: "Live",
+    slug: "storefront-web",
+  },
+  {
+    name: "billing-api",
+    stack: "Node + Fastify",
+    branch: "release",
+    status: "Live",
+    slug: "billing-api",
+  },
+  {
+    name: "worker-ingestion",
+    stack: "Python",
+    branch: "staging",
+    status: "Deploying",
+    slug: "worker-ingestion",
+  },
+  {
+    name: "docs-site",
+    stack: "Astro",
+    branch: "main",
+    status: "Queued",
+    slug: "docs-site",
+  },
+  {
+    name: "support-backoffice",
+    stack: "React",
+    branch: "dev",
+    status: "Paused",
+    slug: "support-backoffice",
+  },
+  {
+    name: "webhook-gateway",
+    stack: "Go",
+    branch: "main",
+    status: "Live",
+    slug: "webhook-gateway",
+  },
 ];
 
 export default function ProjectsPage() {
@@ -27,7 +63,10 @@ export default function ProjectsPage() {
 
       <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
         {apps.map((app) => (
-          <Card key={app.name} className="border-border/70 bg-card/90 shadow-sm">
+          <Card
+            key={app.name}
+            className="border-border/70 bg-card/90 shadow-sm"
+          >
             <CardHeader>
               <CardTitle className="flex items-start justify-between gap-2 text-base">
                 {app.name}
@@ -45,7 +84,12 @@ export default function ProjectsPage() {
                 <Button asChild className="rounded-full px-4">
                   <Link href={`/projects/${app.slug}`}>Open</Link>
                 </Button>
-                <MockActionDialog label="Redeploy" entity={app.name} variant="outline" className="rounded-full" />
+                <MockActionDialog
+                  label="Redeploy"
+                  entity={app.name}
+                  variant="outline"
+                  className="rounded-full"
+                />
               </div>
             </CardContent>
           </Card>
@@ -57,10 +101,16 @@ export default function ProjectsPage() {
           <Layers3 className="h-4 w-4 text-primary" /> Template Recommendations
         </h2>
         <p className="mt-1 text-sm text-muted-foreground">
-          Connect a monorepo and auto-suggest service templates with default env and health probes.
+          Connect a monorepo and auto-suggest service templates with default env
+          and health probes.
         </p>
         <div className="mt-2 inline-flex items-center gap-2">
-          <MockActionDialog label="Generate Suggestions" entity="template engine" variant="ghost" className="px-0 text-primary hover:bg-transparent" />
+          <MockActionDialog
+            label="Generate Suggestions"
+            entity="template engine"
+            variant="ghost"
+            className="px-0 text-primary hover:bg-transparent"
+          />
           <ArrowUpRight className="h-4 w-4 text-primary" />
         </div>
       </section>

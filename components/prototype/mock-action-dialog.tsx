@@ -88,7 +88,8 @@ export function MockActionDialog({
             Mock Action: {label}
           </DialogTitle>
           <DialogDescription>
-            This prototype simulates {actionText} for this {entity}. No real infrastructure changes are executed.
+            This prototype simulates {actionText} for this {entity}. No real
+            infrastructure changes are executed.
           </DialogDescription>
         </DialogHeader>
 

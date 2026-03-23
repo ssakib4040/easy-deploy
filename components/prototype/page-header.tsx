@@ -13,15 +13,23 @@ export function PageHeader({
   return (
     <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
       <div>
-        <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">{title}</h1>
-        <p className="mt-1 text-sm text-muted-foreground md:text-base">{subtitle}</p>
+        <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
+          {title}
+        </h1>
+        <p className="mt-1 text-sm text-muted-foreground md:text-base">
+          {subtitle}
+        </p>
       </div>
       <div className="flex items-center gap-2">
         <Badge variant="outline" className="rounded-full px-3">
           Demo Data
         </Badge>
         {primaryAction ? (
-          <MockActionDialog label={primaryAction} entity="page scope" className="rounded-full px-4" />
+          <MockActionDialog
+            label={primaryAction}
+            entity="page scope"
+            className="rounded-full px-4"
+          />
         ) : null}
       </div>
     </header>

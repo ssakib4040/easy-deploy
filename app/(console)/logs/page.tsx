@@ -31,16 +31,24 @@ export default function LogsPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <FileTerminal className="h-4 w-4" /> Live Feed
-            <Badge variant="outline" className="rounded-full px-3">Demo stream</Badge>
+            <Badge variant="outline" className="rounded-full px-3">
+              Demo stream
+            </Badge>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="mb-3 grid gap-2 md:grid-cols-[1fr_auto_auto]">
             <Input placeholder="Search logs" className="h-9" />
-            <Badge variant="outline" className="h-9 items-center justify-center rounded-full px-3">
+            <Badge
+              variant="outline"
+              className="h-9 items-center justify-center rounded-full px-3"
+            >
               <Search className="mr-1 h-3.5 w-3.5" /> Keyword
             </Badge>
-            <Badge variant="outline" className="h-9 items-center justify-center rounded-full px-3">
+            <Badge
+              variant="outline"
+              className="h-9 items-center justify-center rounded-full px-3"
+            >
               <Filter className="mr-1 h-3.5 w-3.5" /> Service filter
             </Badge>
           </div>
@@ -50,7 +58,10 @@ export default function LogsPage() {
               {lines.map((line) => (
                 <p key={line}>{line}</p>
               ))}
-              <p className="flex items-center gap-1 text-destructive"><AlertTriangle className="h-3.5 w-3.5" /> Alert: response time spike detected at eu-west-2 edge.</p>
+              <p className="flex items-center gap-1 text-destructive">
+                <AlertTriangle className="h-3.5 w-3.5" /> Alert: response time
+                spike detected at eu-west-2 edge.
+              </p>
             </div>
           </ScrollArea>
         </CardContent>

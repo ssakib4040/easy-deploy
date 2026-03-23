@@ -12,7 +12,9 @@ export function StatCard({
   return (
     <Card className="border-border/80 bg-card/90 shadow-sm">
       <CardHeader className="pb-2">
-        <CardTitle className="text-xs uppercase tracking-widest text-muted-foreground">{title}</CardTitle>
+        <CardTitle className="text-xs uppercase tracking-widest text-muted-foreground">
+          {title}
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <p className="text-2xl font-semibold tracking-tight">{value}</p>

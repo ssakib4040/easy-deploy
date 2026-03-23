@@ -30,15 +30,21 @@ export default function ServersPage() {
             </CardHeader>
             <CardContent className="grid gap-3 md:grid-cols-3">
               <div>
-                <p className="mb-1 text-xs text-muted-foreground"><Cpu className="mr-1 inline h-3.5 w-3.5" /> CPU</p>
+                <p className="mb-1 text-xs text-muted-foreground">
+                  <Cpu className="mr-1 inline h-3.5 w-3.5" /> CPU
+                </p>
                 <Progress value={node.cpu} className="h-2" />
               </div>
               <div>
-                <p className="mb-1 text-xs text-muted-foreground"><HardDrive className="mr-1 inline h-3.5 w-3.5" /> Memory</p>
+                <p className="mb-1 text-xs text-muted-foreground">
+                  <HardDrive className="mr-1 inline h-3.5 w-3.5" /> Memory
+                </p>
                 <Progress value={node.memory} className="h-2" />
               </div>
               <div>
-                <p className="mb-1 text-xs text-muted-foreground"><Network className="mr-1 inline h-3.5 w-3.5" /> Network</p>
+                <p className="mb-1 text-xs text-muted-foreground">
+                  <Network className="mr-1 inline h-3.5 w-3.5" /> Network
+                </p>
                 <p className="text-sm font-medium">{node.network}</p>
               </div>
             </CardContent>
