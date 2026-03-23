@@ -97,15 +97,15 @@ export function MockActionDialog({
           <div className="flex items-center justify-between text-xs">
             <span className="text-muted-foreground">Execution state</span>
             {done ? (
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 Completed
               </Badge>
             ) : running ? (
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 Running
               </Badge>
             ) : (
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 Waiting
               </Badge>
             )}

@@ -67,16 +67,16 @@ export default function DomainsPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-2 text-xs">
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Globe className="mr-1 h-3 w-3" /> Public
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Shield className="mr-1 h-3 w-3" /> SSL: {domain.ssl}
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Zap className="mr-1 h-3 w-3" /> CDN: {domain.cdn}
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Link2 className="mr-1 h-3 w-3" /> DNS Verified
                 </Badge>
               </div>

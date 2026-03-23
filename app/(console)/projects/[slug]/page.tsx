@@ -86,7 +86,7 @@ export default async function ProjectDetailsPage({
             </CardHeader>
             <CardContent className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">eu-west / us-east</span>
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 Healthy
               </Badge>
             </CardContent>
@@ -101,7 +101,7 @@ export default async function ProjectDetailsPage({
             <MockActionDialog
               label="Add Variable"
               entity={slug}
-              className="rounded-full px-4"
+              className="px-4"
             />
           </CardHeader>
           <CardContent className="space-y-2">
@@ -116,7 +116,7 @@ export default async function ProjectDetailsPage({
                     Scope: {variable.scope}
                   </p>
                 </div>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   {variable.visibility}
                 </Badge>
               </div>

@@ -68,7 +68,7 @@ export default function DeploymentsPage() {
                     {deployment.id}
                   </p>
                 </div>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   {deployment.status}
                 </Badge>
               </div>

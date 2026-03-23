@@ -21,14 +21,14 @@ export function PageHeader({
         </p>
       </div>
       <div className="flex items-center gap-2">
-        <Badge variant="outline" className="rounded-full px-3">
+        <Badge variant="outline" className="px-3">
           Demo Data
         </Badge>
         {primaryAction ? (
           <MockActionDialog
             label={primaryAction}
             entity="page scope"
-            className="rounded-full px-4"
+            className="px-4"
           />
         ) : null}
       </div>

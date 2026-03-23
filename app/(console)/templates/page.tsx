@@ -43,7 +43,7 @@ export default function TemplatesPage() {
             <CardHeader>
               <CardTitle className="flex items-start justify-between gap-2 text-base">
                 {template.name}
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   {template.tag}
                 </Badge>
               </CardTitle>
@@ -54,13 +54,12 @@ export default function TemplatesPage() {
                 <MockActionDialog
                   label="Use Template"
                   entity={template.name}
-                  className="rounded-full px-4"
+                  className="px-4"
                 />
                 <MockActionDialog
                   label="Inspect"
                   entity={template.name}
                   variant="outline"
-                  className="rounded-full"
                 />
               </div>
             </CardContent>

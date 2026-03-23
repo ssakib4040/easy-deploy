@@ -23,7 +23,7 @@ export default function Home() {
             </p>
             <h1 className="text-lg font-semibold">EasyDeploy</h1>
           </div>
-          <Button asChild className="rounded-full px-4">
+          <Button asChild className="px-4">
             <Link href="/dashboard">Open Console</Link>
           </Button>
         </header>
@@ -31,7 +31,7 @@ export default function Home() {
         <main className="grid gap-4 lg:grid-cols-[1.35fr_1fr]">
           <Card className="border-border/70 bg-card/90 shadow-sm">
             <CardHeader>
-              <Badge variant="outline" className="w-fit rounded-full px-3">
+              <Badge variant="outline" className="w-fit px-3">
                 Frontend Prototype Demo
               </Badge>
               <CardTitle className="mt-2 text-4xl leading-tight tracking-tight md:text-6xl">
@@ -46,12 +46,12 @@ export default function Home() {
                 architecture, and clean operational screens.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button asChild className="rounded-full px-4">
+                <Button asChild className="px-4">
                   <Link href="/dashboard">
                     Enter dashboard <ArrowRight className="ml-1 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" asChild className="rounded-full">
+                <Button variant="outline" asChild>
                   <Link href="/projects">Explore pages</Link>
                 </Button>
               </div>

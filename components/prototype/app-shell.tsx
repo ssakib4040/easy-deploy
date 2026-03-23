@@ -253,7 +253,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
                 <Input
                   placeholder="Search projects, logs, domains"
-                  className="h-9 w-64 rounded-full pl-8"
+                  className="h-9 w-64 pl-8"
                 />
               </div>
               <DropdownMenu>
@@ -261,7 +261,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="relative h-9 w-9 rounded-full border-border/70 text-muted-foreground hover:text-foreground"
+                    className="relative h-9 w-9 border-border/70 text-muted-foreground hover:text-foreground"
                   >
                     <Bell className="h-4 w-4" />
                     {unreadCount > 0 ? (
@@ -274,7 +274,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 <DropdownMenuContent align="end" className="w-80">
                   <DropdownMenuLabel className="flex items-center justify-between">
                     Notifications
-                    <Badge variant="outline" className="rounded-full px-2">
+                    <Badge variant="outline" className="px-2">
                       {unreadCount} unread
                     </Badge>
                   </DropdownMenuLabel>
@@ -310,14 +310,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 {signedIn ? "Demo User" : "Guest"}
               </Badge>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className="h-auto rounded-full p-0 hover:bg-transparent"
+                    className="h-auto p-0 hover:bg-transparent"
                   >
                     <Avatar className="h-8 w-8 border border-border/70">
                       <AvatarFallback>{signedIn ? "SS" : "GU"}</AvatarFallback>

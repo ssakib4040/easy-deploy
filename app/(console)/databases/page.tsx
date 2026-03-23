@@ -32,7 +32,7 @@ export default function DatabasesPage() {
             <CardHeader>
               <CardTitle className="flex items-center justify-between gap-2 text-base">
                 <span>{db.name}</span>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   {db.engine}
                 </Badge>
               </CardTitle>
@@ -45,16 +45,16 @@ export default function DatabasesPage() {
                 <Progress value={db.usage} className="h-2" />
               </div>
               <div className="flex flex-wrap gap-2 text-xs">
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Database className="mr-1 h-3 w-3" /> Replication
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <HardDriveDownload className="mr-1 h-3 w-3" /> Daily backup
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <ShieldCheck className="mr-1 h-3 w-3" /> Encrypted
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Sparkles className="mr-1 h-3 w-3" /> Auto-tune
                 </Badge>
               </div>

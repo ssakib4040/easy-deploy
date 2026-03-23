@@ -32,13 +32,13 @@ export default function LicensingPage() {
               </span>
             </p>
             <div className="flex flex-wrap gap-2 text-xs">
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 <Sparkles className="mr-1 h-3 w-3" /> Unlimited projects
               </Badge>
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 <ShieldCheck className="mr-1 h-3 w-3" /> Priority patches
               </Badge>
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 <CircleDollarSign className="mr-1 h-3 w-3" /> Flat pricing
               </Badge>
             </div>

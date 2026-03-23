@@ -102,7 +102,7 @@ export default function DashboardPage() {
                   <p className="text-xs text-muted-foreground">{event.time}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge variant="outline" className="rounded-full px-3">
+                  <Badge variant="outline" className="px-3">
                     {event.status}
                   </Badge>
                   <ArrowUpRight className="h-4 w-4 text-muted-foreground" />

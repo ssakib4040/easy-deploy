@@ -46,7 +46,7 @@ export default function AuditPage() {
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="font-medium">{event.action}</p>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Clock3 className="mr-1 h-3 w-3" /> {event.when}
                 </Badge>
               </div>

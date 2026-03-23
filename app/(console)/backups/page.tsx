@@ -54,16 +54,16 @@ export default function BackupsPage() {
                 <p className="text-xs text-muted-foreground">{item.when}</p>
               </div>
               <div className="flex flex-wrap gap-2 text-xs">
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <DatabaseBackup className="mr-1 h-3 w-3" /> {item.size}
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <ArchiveRestore className="mr-1 h-3 w-3" /> Restore ready
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <CalendarCheck className="mr-1 h-3 w-3" /> {item.integrity}
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Download className="mr-1 h-3 w-3" /> Export
                 </Badge>
               </div>

@@ -38,7 +38,7 @@ export default function TeamPage() {
                   <Mail className="h-3.5 w-3.5" /> {member.email}
                 </p>
               </div>
-              <Badge variant="outline" className="rounded-full px-3">
+              <Badge variant="outline" className="px-3">
                 {member.role === "Owner" ? (
                   <Crown className="mr-1 h-3 w-3" />
                 ) : (

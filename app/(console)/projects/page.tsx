@@ -70,7 +70,7 @@ export default function ProjectsPage() {
             <CardHeader>
               <CardTitle className="flex items-start justify-between gap-2 text-base">
                 {app.name}
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   {app.status}
                 </Badge>
               </CardTitle>
@@ -81,14 +81,13 @@ export default function ProjectsPage() {
                 <GitBranch className="h-4 w-4" /> {app.branch}
               </p>
               <div className="flex items-center gap-2">
-                <Button asChild className="rounded-full px-4">
+                <Button asChild className="px-4">
                   <Link href={`/projects/${app.slug}`}>Open</Link>
                 </Button>
                 <MockActionDialog
                   label="Redeploy"
                   entity={app.name}
                   variant="outline"
-                  className="rounded-full"
                 />
               </div>
             </CardContent>

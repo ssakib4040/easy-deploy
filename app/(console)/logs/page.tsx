@@ -31,7 +31,7 @@ export default function LogsPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <FileTerminal className="h-4 w-4" /> Live Feed
-            <Badge variant="outline" className="rounded-full px-3">
+            <Badge variant="outline" className="px-3">
               Demo stream
             </Badge>
           </CardTitle>
@@ -41,13 +41,13 @@ export default function LogsPage() {
             <Input placeholder="Search logs" className="h-9" />
             <Badge
               variant="outline"
-              className="h-9 items-center justify-center rounded-full px-3"
+              className="h-9 items-center justify-center px-3"
             >
               <Search className="mr-1 h-3.5 w-3.5" /> Keyword
             </Badge>
             <Badge
               variant="outline"
-              className="h-9 items-center justify-center rounded-full px-3"
+              className="h-9 items-center justify-center px-3"
             >
               <Filter className="mr-1 h-3.5 w-3.5" /> Service filter
             </Badge>

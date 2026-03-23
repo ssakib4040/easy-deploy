@@ -49,13 +49,13 @@ export default function PreviewEnvironmentsPage() {
                 <p className="text-xs text-muted-foreground">{preview.url}</p>
               </div>
               <div className="flex flex-wrap gap-2 text-xs">
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <GitPullRequest className="mr-1 h-3 w-3" /> {preview.pr}
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Eye className="mr-1 h-3 w-3" /> Review URL
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   {preview.state === "Building" ? (
                     <Hourglass className="mr-1 h-3 w-3" />
                   ) : (

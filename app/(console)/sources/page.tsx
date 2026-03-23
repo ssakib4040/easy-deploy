@@ -66,16 +66,16 @@ export default function SourcesPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-2 text-xs">
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <GitFork className="mr-1 h-3 w-3" /> Repo
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <GitBranch className="mr-1 h-3 w-3" /> {src.branches} branches
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <Workflow className="mr-1 h-3 w-3" /> CI sync
                 </Badge>
-                <Badge variant="outline" className="rounded-full px-3">
+                <Badge variant="outline" className="px-3">
                   <ShieldCheck className="mr-1 h-3 w-3" /> {src.status}
                 </Badge>
               </div>
