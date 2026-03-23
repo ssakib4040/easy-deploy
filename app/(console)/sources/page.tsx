@@ -91,10 +91,20 @@ export default function SourcesPage() {
             <CardTitle className="text-base">Webhook Reliability</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Protect source-triggered deployments with signed webhooks, retries, and replay support.</p>
+            <p>
+              Protect source-triggered deployments with signed webhooks,
+              retries, and replay support.
+            </p>
             <div className="flex flex-wrap gap-2">
-              <MockActionDialog label="Rotate Webhook Secret" entity="source webhook" variant="outline" />
-              <MockActionDialog label="Replay Last Event" entity="source webhook" />
+              <MockActionDialog
+                label="Rotate Webhook Secret"
+                entity="source webhook"
+                variant="outline"
+              />
+              <MockActionDialog
+                label="Replay Last Event"
+                entity="source webhook"
+              />
             </div>
           </CardContent>
         </Card>
@@ -104,10 +114,21 @@ export default function SourcesPage() {
             <CardTitle className="text-base">Build Security Gates</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Require image scans, signed commits, and policy checks before production deployment.</p>
+            <p>
+              Require image scans, signed commits, and policy checks before
+              production deployment.
+            </p>
             <div className="flex flex-wrap gap-2">
-              <MockActionDialog label="Enable Signed Commits" entity="source policy" className="px-4" />
-              <MockActionDialog label="Require Security Scan" entity="build policy" variant="ghost" />
+              <MockActionDialog
+                label="Enable Signed Commits"
+                entity="source policy"
+                className="px-4"
+              />
+              <MockActionDialog
+                label="Require Security Scan"
+                entity="build policy"
+                variant="ghost"
+              />
             </div>
           </CardContent>
         </Card>

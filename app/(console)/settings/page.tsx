@@ -100,13 +100,19 @@ export default function SettingsPage() {
             <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
               Block deployments when quota exceeded <Switch defaultChecked />
             </label>
-            <MockActionDialog label="Edit Quota Defaults" entity="workspace quota policy" className="px-4" />
+            <MockActionDialog
+              label="Edit Quota Defaults"
+              entity="workspace quota policy"
+              className="px-4"
+            />
           </CardContent>
         </Card>
 
         <Card className="border-border/70 bg-card/90">
           <CardHeader>
-            <CardTitle className="text-base">Runtime Security Hardening</CardTitle>
+            <CardTitle className="text-base">
+              Runtime Security Hardening
+            </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
             <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
@@ -118,7 +124,12 @@ export default function SettingsPage() {
             <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
               Require signed image digests <Switch />
             </label>
-            <MockActionDialog label="Apply Security Baseline" entity="runtime policy" variant="outline" className="px-4" />
+            <MockActionDialog
+              label="Apply Security Baseline"
+              entity="runtime policy"
+              variant="outline"
+              className="px-4"
+            />
           </CardContent>
         </Card>
       </section>

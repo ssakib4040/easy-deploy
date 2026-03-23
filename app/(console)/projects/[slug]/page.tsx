@@ -133,16 +133,32 @@ export default async function ProjectDetailsPage({
           <CardContent className="space-y-3 text-sm text-muted-foreground">
             <div className="rounded-xl border border-border/70 bg-background p-3">
               <p className="font-medium text-foreground">Canary Rollout</p>
-              <p className="mt-1">Progressive traffic shifting: 5% → 25% → 50% → 100% with automatic error budget checks.</p>
+              <p className="mt-1">
+                Progressive traffic shifting: 5% → 25% → 50% → 100% with
+                automatic error budget checks.
+              </p>
             </div>
             <div className="rounded-xl border border-border/70 bg-background p-3">
-              <p className="font-medium text-foreground">Blue-Green Promotion</p>
-              <p className="mt-1">Maintain a hot standby release and switch traffic only after synthetic probes pass.</p>
+              <p className="font-medium text-foreground">
+                Blue-Green Promotion
+              </p>
+              <p className="mt-1">
+                Maintain a hot standby release and switch traffic only after
+                synthetic probes pass.
+              </p>
             </div>
             <div className="flex flex-wrap gap-2">
-              <MockActionDialog label="Start Canary" entity={slug} variant="outline" />
+              <MockActionDialog
+                label="Start Canary"
+                entity={slug}
+                variant="outline"
+              />
               <MockActionDialog label="Promote Blue-Green" entity={slug} />
-              <MockActionDialog label="Rollback to Last Stable" entity={slug} variant="ghost" />
+              <MockActionDialog
+                label="Rollback to Last Stable"
+                entity={slug}
+                variant="ghost"
+              />
             </div>
           </CardContent>
         </Card>
@@ -152,16 +168,35 @@ export default async function ProjectDetailsPage({
             <CardTitle>Secret Rotation</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Rotate database credentials, API tokens, and webhook signing keys without full downtime.</p>
+            <p>
+              Rotate database credentials, API tokens, and webhook signing keys
+              without full downtime.
+            </p>
             <div className="grid gap-2 sm:grid-cols-2">
-              <div className="rounded-lg border border-border/70 bg-background p-2.5">Database password rotation: every 30 days</div>
-              <div className="rounded-lg border border-border/70 bg-background p-2.5">Service token rotation: every 14 days</div>
-              <div className="rounded-lg border border-border/70 bg-background p-2.5">Last emergency rotation: 9 days ago</div>
-              <div className="rounded-lg border border-border/70 bg-background p-2.5">Verification probes: enabled</div>
+              <div className="rounded-lg border border-border/70 bg-background p-2.5">
+                Database password rotation: every 30 days
+              </div>
+              <div className="rounded-lg border border-border/70 bg-background p-2.5">
+                Service token rotation: every 14 days
+              </div>
+              <div className="rounded-lg border border-border/70 bg-background p-2.5">
+                Last emergency rotation: 9 days ago
+              </div>
+              <div className="rounded-lg border border-border/70 bg-background p-2.5">
+                Verification probes: enabled
+              </div>
             </div>
             <div className="flex flex-wrap gap-2">
-              <MockActionDialog label="Rotate All Secrets" entity={slug} className="px-4" />
-              <MockActionDialog label="Test Secret Sync" entity={slug} variant="outline" />
+              <MockActionDialog
+                label="Rotate All Secrets"
+                entity={slug}
+                className="px-4"
+              />
+              <MockActionDialog
+                label="Test Secret Sync"
+                entity={slug}
+                variant="outline"
+              />
             </div>
           </CardContent>
         </Card>

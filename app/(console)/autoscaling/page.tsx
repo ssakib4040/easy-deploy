@@ -58,22 +58,36 @@ export default function AutoscalingPage() {
                 <p className="mb-2 text-xs text-muted-foreground">
                   Replica utilization ({policy.current}/{policy.max})
                 </p>
-                <Progress value={(policy.current / policy.max) * 100} className="h-2" />
+                <Progress
+                  value={(policy.current / policy.max) * 100}
+                  className="h-2"
+                />
               </div>
               <div className="grid gap-2 text-xs text-muted-foreground sm:grid-cols-3">
                 <p className="rounded-lg border border-border/70 bg-background p-2">
-                  <Gauge className="mr-1 inline h-3.5 w-3.5" /> Min: {policy.min}
+                  <Gauge className="mr-1 inline h-3.5 w-3.5" /> Min:{" "}
+                  {policy.min}
                 </p>
                 <p className="rounded-lg border border-border/70 bg-background p-2">
-                  <Rocket className="mr-1 inline h-3.5 w-3.5" /> Max: {policy.max}
+                  <Rocket className="mr-1 inline h-3.5 w-3.5" /> Max:{" "}
+                  {policy.max}
                 </p>
                 <p className="rounded-lg border border-border/70 bg-background p-2">
-                  <TimerReset className="mr-1 inline h-3.5 w-3.5" /> Cooldown: {policy.cooldown}
+                  <TimerReset className="mr-1 inline h-3.5 w-3.5" /> Cooldown:{" "}
+                  {policy.cooldown}
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                <MockActionDialog label="Scale Now" entity={policy.app} variant="outline" />
-                <MockActionDialog label="Edit Rule" entity={policy.app} variant="ghost" />
+                <MockActionDialog
+                  label="Scale Now"
+                  entity={policy.app}
+                  variant="outline"
+                />
+                <MockActionDialog
+                  label="Edit Rule"
+                  entity={policy.app}
+                  variant="ghost"
+                />
               </div>
             </CardContent>
           </Card>
@@ -86,11 +100,19 @@ export default function AutoscalingPage() {
             <CardTitle className="text-base">Scheduled Scaling</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Scale up during known traffic windows and reduce idle capacity overnight.</p>
-            <p className="rounded-lg border border-border/70 bg-background p-2.5">
-              <CalendarClock className="mr-1 inline h-4 w-4 text-primary" /> Weekday schedule active for 4 services
+            <p>
+              Scale up during known traffic windows and reduce idle capacity
+              overnight.
             </p>
-            <MockActionDialog label="Add Schedule" entity="autoscaling schedule" className="px-4" />
+            <p className="rounded-lg border border-border/70 bg-background p-2.5">
+              <CalendarClock className="mr-1 inline h-4 w-4 text-primary" />{" "}
+              Weekday schedule active for 4 services
+            </p>
+            <MockActionDialog
+              label="Add Schedule"
+              entity="autoscaling schedule"
+              className="px-4"
+            />
           </CardContent>
         </Card>
 
@@ -99,11 +121,19 @@ export default function AutoscalingPage() {
             <CardTitle className="text-base">Scale-to-Zero Profiles</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Reduce non-production cost by hibernating preview and sandbox services automatically.</p>
+            <p>
+              Reduce non-production cost by hibernating preview and sandbox
+              services automatically.
+            </p>
             <p className="rounded-lg border border-border/70 bg-background p-2.5">
               Enabled for 9 preview workloads with 30-minute idle threshold
             </p>
-            <MockActionDialog label="Configure Idle Policy" entity="scale-to-zero" variant="outline" className="px-4" />
+            <MockActionDialog
+              label="Configure Idle Policy"
+              entity="scale-to-zero"
+              variant="outline"
+              className="px-4"
+            />
           </CardContent>
         </Card>
       </section>

@@ -59,8 +59,15 @@ export default function ServersPage() {
             <CardTitle className="text-base">OS Patch Management</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Schedule unattended security patch windows for VPS hosts with maintenance safeguards.</p>
-            <MockActionDialog label="Patch All Nodes" entity="host patching" className="px-4" />
+            <p>
+              Schedule unattended security patch windows for VPS hosts with
+              maintenance safeguards.
+            </p>
+            <MockActionDialog
+              label="Patch All Nodes"
+              entity="host patching"
+              className="px-4"
+            />
           </CardContent>
         </Card>
 
@@ -69,8 +76,16 @@ export default function ServersPage() {
             <CardTitle className="text-base">Node Draining</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Gracefully drain workloads from unhealthy nodes before restart, replacement, or kernel updates.</p>
-            <MockActionDialog label="Drain Node" entity="server workload routing" variant="outline" className="px-4" />
+            <p>
+              Gracefully drain workloads from unhealthy nodes before restart,
+              replacement, or kernel updates.
+            </p>
+            <MockActionDialog
+              label="Drain Node"
+              entity="server workload routing"
+              variant="outline"
+              className="px-4"
+            />
           </CardContent>
         </Card>
 
@@ -79,8 +94,16 @@ export default function ServersPage() {
             <CardTitle className="text-base">Emergency SSH Access</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Issue time-bound break-glass SSH credentials with full audit logging.</p>
-            <MockActionDialog label="Issue Break-Glass Key" entity="emergency SSH" variant="ghost" className="px-4" />
+            <p>
+              Issue time-bound break-glass SSH credentials with full audit
+              logging.
+            </p>
+            <MockActionDialog
+              label="Issue Break-Glass Key"
+              entity="emergency SSH"
+              variant="ghost"
+              className="px-4"
+            />
           </CardContent>
         </Card>
       </section>

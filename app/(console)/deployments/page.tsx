@@ -101,10 +101,25 @@ export default function DeploymentsPage() {
           <CardTitle className="text-base">Release Controls</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-wrap gap-2">
-          <MockActionDialog label="Rollback Latest Release" entity="deployment timeline" variant="outline" />
-          <MockActionDialog label="Start Blue-Green Deploy" entity="deployment strategy" />
-          <MockActionDialog label="Set Canary Steps" entity="deployment strategy" variant="ghost" />
-          <MockActionDialog label="Enable Auto Abort" entity="deployment safety guard" variant="outline" />
+          <MockActionDialog
+            label="Rollback Latest Release"
+            entity="deployment timeline"
+            variant="outline"
+          />
+          <MockActionDialog
+            label="Start Blue-Green Deploy"
+            entity="deployment strategy"
+          />
+          <MockActionDialog
+            label="Set Canary Steps"
+            entity="deployment strategy"
+            variant="ghost"
+          />
+          <MockActionDialog
+            label="Enable Auto Abort"
+            entity="deployment safety guard"
+            variant="outline"
+          />
         </CardContent>
       </Card>
     </>

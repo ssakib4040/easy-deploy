@@ -59,10 +59,21 @@ export default function TeamPage() {
             <CardTitle className="text-base">Access Governance</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Enforce SSO sign-in, just-in-time elevation for production operations, and access review cycles.</p>
+            <p>
+              Enforce SSO sign-in, just-in-time elevation for production
+              operations, and access review cycles.
+            </p>
             <div className="flex flex-wrap gap-2">
-              <MockActionDialog label="Configure SSO" entity="workspace identity" className="px-4" />
-              <MockActionDialog label="Run Access Review" entity="workspace members" variant="outline" />
+              <MockActionDialog
+                label="Configure SSO"
+                entity="workspace identity"
+                className="px-4"
+              />
+              <MockActionDialog
+                label="Run Access Review"
+                entity="workspace members"
+                variant="outline"
+              />
             </div>
           </CardContent>
         </Card>
@@ -72,12 +83,22 @@ export default function TeamPage() {
             <CardTitle className="text-base">Automation Credentials</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Manage service credentials for CI/CD and integration automation with scoped permissions.</p>
+            <p>
+              Manage service credentials for CI/CD and integration automation
+              with scoped permissions.
+            </p>
             <div className="flex flex-wrap gap-2">
-              <Link href="/api-keys" className="rounded-lg border border-border/70 bg-background px-3 py-2 text-foreground hover:bg-muted">
+              <Link
+                href="/api-keys"
+                className="rounded-lg border border-border/70 bg-background px-3 py-2 text-foreground hover:bg-muted"
+              >
                 Open API Keys
               </Link>
-              <MockActionDialog label="Generate Runner Token" entity="automation credential" variant="ghost" />
+              <MockActionDialog
+                label="Generate Runner Token"
+                entity="automation credential"
+                variant="ghost"
+              />
             </div>
           </CardContent>
         </Card>

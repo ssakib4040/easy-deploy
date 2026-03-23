@@ -27,12 +27,19 @@ export default function StatusPage() {
         </CardHeader>
         <CardContent className="space-y-2">
           {components.map((item) => (
-            <div key={item.name} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border/70 bg-background p-3 text-sm">
+            <div
+              key={item.name}
+              className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border/70 bg-background p-3 text-sm"
+            >
               <div>
                 <p className="font-medium">{item.name}</p>
-                <p className="text-xs text-muted-foreground">Region: {item.region}</p>
+                <p className="text-xs text-muted-foreground">
+                  Region: {item.region}
+                </p>
               </div>
-              <Badge variant="outline" className="px-3">{item.status}</Badge>
+              <Badge variant="outline" className="px-3">
+                {item.status}
+              </Badge>
             </div>
           ))}
         </CardContent>
@@ -40,27 +47,54 @@ export default function StatusPage() {
 
       <section className="mt-4 grid gap-3 md:grid-cols-3">
         <Card className="border-border/70 bg-card/90">
-          <CardHeader><CardTitle className="text-sm"><HeartPulse className="mr-1 inline h-4 w-4" /> SLA Last 30d</CardTitle></CardHeader>
+          <CardHeader>
+            <CardTitle className="text-sm">
+              <HeartPulse className="mr-1 inline h-4 w-4" /> SLA Last 30d
+            </CardTitle>
+          </CardHeader>
           <CardContent className="text-2xl font-semibold">99.96%</CardContent>
         </Card>
         <Card className="border-border/70 bg-card/90">
-          <CardHeader><CardTitle className="text-sm"><AlertTriangle className="mr-1 inline h-4 w-4" /> Open Incidents</CardTitle></CardHeader>
+          <CardHeader>
+            <CardTitle className="text-sm">
+              <AlertTriangle className="mr-1 inline h-4 w-4" /> Open Incidents
+            </CardTitle>
+          </CardHeader>
           <CardContent className="text-2xl font-semibold">1</CardContent>
         </Card>
         <Card className="border-border/70 bg-card/90">
-          <CardHeader><CardTitle className="text-sm"><Globe className="mr-1 inline h-4 w-4" /> Subscribed Users</CardTitle></CardHeader>
+          <CardHeader>
+            <CardTitle className="text-sm">
+              <Globe className="mr-1 inline h-4 w-4" /> Subscribed Users
+            </CardTitle>
+          </CardHeader>
           <CardContent className="text-2xl font-semibold">284</CardContent>
         </Card>
       </section>
 
       <Card className="mt-4 border-border/70 bg-card/90">
         <CardHeader>
-          <CardTitle className="text-base"><CalendarClock className="mr-1 inline h-4 w-4" /> Maintenance Windows</CardTitle>
+          <CardTitle className="text-base">
+            <CalendarClock className="mr-1 inline h-4 w-4" /> Maintenance
+            Windows
+          </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-wrap gap-2">
-          <MockActionDialog label="Schedule Maintenance" entity="public status" className="px-4" />
-          <MockActionDialog label="Notify Subscribers" entity="status subscribers" variant="outline" />
-          <MockActionDialog label="Publish Postmortem" entity="incident timeline" variant="ghost" />
+          <MockActionDialog
+            label="Schedule Maintenance"
+            entity="public status"
+            className="px-4"
+          />
+          <MockActionDialog
+            label="Notify Subscribers"
+            entity="status subscribers"
+            variant="outline"
+          />
+          <MockActionDialog
+            label="Publish Postmortem"
+            entity="incident timeline"
+            variant="ghost"
+          />
         </CardContent>
       </Card>
     </>

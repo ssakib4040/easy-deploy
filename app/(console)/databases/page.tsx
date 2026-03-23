@@ -70,10 +70,21 @@ export default function DatabasesPage() {
             <CardTitle className="text-base">Failover Controls</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Define automatic failover thresholds and preferred replica promotion order.</p>
+            <p>
+              Define automatic failover thresholds and preferred replica
+              promotion order.
+            </p>
             <div className="flex flex-wrap gap-2">
-              <MockActionDialog label="Run Failover Test" entity="database cluster" className="px-4" />
-              <MockActionDialog label="Promote Replica" entity="database cluster" variant="outline" />
+              <MockActionDialog
+                label="Run Failover Test"
+                entity="database cluster"
+                className="px-4"
+              />
+              <MockActionDialog
+                label="Promote Replica"
+                entity="database cluster"
+                variant="outline"
+              />
             </div>
           </CardContent>
         </Card>
@@ -83,10 +94,20 @@ export default function DatabasesPage() {
             <CardTitle className="text-base">Performance Advisor</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <p>Detect slow queries, storage hotspots, and memory pressure with actionable tuning guidance.</p>
+            <p>
+              Detect slow queries, storage hotspots, and memory pressure with
+              actionable tuning guidance.
+            </p>
             <div className="flex flex-wrap gap-2">
-              <MockActionDialog label="Run Query Audit" entity="database performance" variant="outline" />
-              <MockActionDialog label="Apply Safe Tuning" entity="database performance" />
+              <MockActionDialog
+                label="Run Query Audit"
+                entity="database performance"
+                variant="outline"
+              />
+              <MockActionDialog
+                label="Apply Safe Tuning"
+                entity="database performance"
+              />
             </div>
           </CardContent>
         </Card>

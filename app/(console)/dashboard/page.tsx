@@ -121,22 +121,40 @@ export default function DashboardPage() {
             <CardTitle>VPS Feature Coverage</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
-            <Link href="/autoscaling" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+            <Link
+              href="/autoscaling"
+              className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground"
+            >
               Autoscaling policies
             </Link>
-            <Link href="/networking" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+            <Link
+              href="/networking"
+              className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground"
+            >
               Firewall and network controls
             </Link>
-            <Link href="/registry" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+            <Link
+              href="/registry"
+              className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground"
+            >
               Private image registry
             </Link>
-            <Link href="/webhooks" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+            <Link
+              href="/webhooks"
+              className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground"
+            >
               Event webhooks and retries
             </Link>
-            <Link href="/api-keys" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+            <Link
+              href="/api-keys"
+              className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground"
+            >
               API keys and service accounts
             </Link>
-            <Link href="/status" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+            <Link
+              href="/status"
+              className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground"
+            >
               Public status and maintenance
             </Link>
           </CardContent>
@@ -147,9 +165,20 @@ export default function DashboardPage() {
             <CardTitle>Operations Shortcuts</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-2">
-            <MockActionDialog label="Trigger Rollback Drill" entity="platform rollout" variant="outline" />
-            <MockActionDialog label="Run Disaster Simulation" entity="platform DR" />
-            <MockActionDialog label="Rotate Platform Secrets" entity="workspace secrets" variant="ghost" />
+            <MockActionDialog
+              label="Trigger Rollback Drill"
+              entity="platform rollout"
+              variant="outline"
+            />
+            <MockActionDialog
+              label="Run Disaster Simulation"
+              entity="platform DR"
+            />
+            <MockActionDialog
+              label="Rotate Platform Secrets"
+              entity="workspace secrets"
+              variant="ghost"
+            />
           </CardContent>
         </Card>
       </section>

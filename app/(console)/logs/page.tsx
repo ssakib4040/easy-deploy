@@ -74,14 +74,32 @@ export default function LogsPage() {
         </CardHeader>
         <CardContent className="space-y-3 text-sm text-muted-foreground">
           <div className="grid gap-2 sm:grid-cols-3">
-            <p className="rounded-lg border border-border/70 bg-background p-2.5">Hot retention: 14 days</p>
-            <p className="rounded-lg border border-border/70 bg-background p-2.5">Archive retention: 180 days</p>
-            <p className="rounded-lg border border-border/70 bg-background p-2.5">External sinks: 2 configured</p>
+            <p className="rounded-lg border border-border/70 bg-background p-2.5">
+              Hot retention: 14 days
+            </p>
+            <p className="rounded-lg border border-border/70 bg-background p-2.5">
+              Archive retention: 180 days
+            </p>
+            <p className="rounded-lg border border-border/70 bg-background p-2.5">
+              External sinks: 2 configured
+            </p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <MockActionDialog label="Set Retention" entity="log lifecycle" className="px-4" />
-            <MockActionDialog label="Forward to SIEM" entity="log forwarding" variant="outline" />
-            <MockActionDialog label="Download Incident Bundle" entity="log archive" variant="ghost" />
+            <MockActionDialog
+              label="Set Retention"
+              entity="log lifecycle"
+              className="px-4"
+            />
+            <MockActionDialog
+              label="Forward to SIEM"
+              entity="log forwarding"
+              variant="outline"
+            />
+            <MockActionDialog
+              label="Download Incident Bundle"
+              entity="log archive"
+              variant="ghost"
+            />
           </div>
         </CardContent>
       </Card>
