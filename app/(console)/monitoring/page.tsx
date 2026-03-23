@@ -1,5 +1,6 @@
 import { Activity, AlertTriangle, Gauge, Timer } from "lucide-react";
 
+import { MockActionDialog } from "@/components/prototype/mock-action-dialog";
 import { PageHeader } from "@/components/prototype/page-header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -62,6 +63,38 @@ export default function MonitoringPage() {
           </p>
         </CardContent>
       </Card>
+
+      <section className="mt-4 grid gap-3 md:grid-cols-2">
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Custom Metrics</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Track business and infrastructure metrics such as checkout throughput, queue lag, and cache hit ratio.</p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              <p className="rounded-lg border border-border/70 bg-background p-2.5">checkout.rps</p>
+              <p className="rounded-lg border border-border/70 bg-background p-2.5">worker.queue_lag</p>
+              <p className="rounded-lg border border-border/70 bg-background p-2.5">cache.hit_ratio</p>
+              <p className="rounded-lg border border-border/70 bg-background p-2.5">db.connection_pool_wait</p>
+            </div>
+            <MockActionDialog label="Create Metric" entity="custom monitoring metric" className="px-4" />
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Escalation Policies</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Define incident severity routing to on-call responders, Slack, and PagerDuty based on alert class.</p>
+            <div className="flex flex-wrap gap-2">
+              <MockActionDialog label="Create Escalation Chain" entity="incident routing" variant="outline" />
+              <MockActionDialog label="Test On-Call Route" entity="incident routing" />
+              <MockActionDialog label="Attach Runbook" entity="alert policy" variant="ghost" />
+            </div>
+          </CardContent>
+        </Card>
+      </section>
     </>
   );
 }

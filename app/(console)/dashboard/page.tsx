@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { Activity, ArrowUpRight, Clock3, Rocket } from "lucide-react";
 
+import { MockActionDialog } from "@/components/prototype/mock-action-dialog";
 import { PageHeader } from "@/components/prototype/page-header";
 import { StatCard } from "@/components/prototype/stat-card";
 import { Badge } from "@/components/ui/badge";
@@ -109,6 +111,45 @@ export default function DashboardPage() {
                 </div>
               </div>
             ))}
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mt-4 grid gap-3 xl:grid-cols-[1.25fr_1fr]">
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle>VPS Feature Coverage</CardTitle>
+          </CardHeader>
+          <CardContent className="grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
+            <Link href="/autoscaling" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+              Autoscaling policies
+            </Link>
+            <Link href="/networking" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+              Firewall and network controls
+            </Link>
+            <Link href="/registry" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+              Private image registry
+            </Link>
+            <Link href="/webhooks" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+              Event webhooks and retries
+            </Link>
+            <Link href="/api-keys" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+              API keys and service accounts
+            </Link>
+            <Link href="/status" className="rounded-lg border border-border/70 bg-background p-2.5 hover:text-foreground">
+              Public status and maintenance
+            </Link>
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle>Operations Shortcuts</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-2">
+            <MockActionDialog label="Trigger Rollback Drill" entity="platform rollout" variant="outline" />
+            <MockActionDialog label="Run Disaster Simulation" entity="platform DR" />
+            <MockActionDialog label="Rotate Platform Secrets" entity="workspace secrets" variant="ghost" />
           </CardContent>
         </Card>
       </section>

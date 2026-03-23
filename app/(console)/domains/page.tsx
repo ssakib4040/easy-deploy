@@ -1,5 +1,6 @@
 import { Globe, Link2, Shield, Zap } from "lucide-react";
 
+import { MockActionDialog } from "@/components/prototype/mock-action-dialog";
 import { PageHeader } from "@/components/prototype/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -83,6 +84,36 @@ export default function DomainsPage() {
             </CardContent>
           </Card>
         ))}
+      </section>
+
+      <section className="mt-4 grid gap-3 md:grid-cols-2">
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Certificate Operations</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Track certificate expiration, auto-renewal attempts, and trust chain validation for every hostname.</p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              <p className="rounded-lg border border-border/70 bg-background p-2.5">Expiring in 7 days: 2 certs</p>
+              <p className="rounded-lg border border-border/70 bg-background p-2.5">Auto-renew success: 99.2%</p>
+            </div>
+            <MockActionDialog label="Renew Certificate" entity="domain certificate" className="px-4" />
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Traffic Controls</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Set redirects, geo-routing, and maintenance-mode routing rules for planned infrastructure work.</p>
+            <div className="flex flex-wrap gap-2">
+              <MockActionDialog label="Add Redirect Rule" entity="edge routing" variant="outline" />
+              <MockActionDialog label="Enable DDoS Shield" entity="edge routing" />
+              <MockActionDialog label="Toggle Maintenance Route" entity="edge routing" variant="ghost" />
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </>
   );

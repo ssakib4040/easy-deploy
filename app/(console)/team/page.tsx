@@ -1,5 +1,7 @@
 import { Crown, Mail, Shield, Users } from "lucide-react";
 
+import Link from "next/link";
+import { MockActionDialog } from "@/components/prototype/mock-action-dialog";
 import { PageHeader } from "@/components/prototype/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -50,6 +52,36 @@ export default function TeamPage() {
           ))}
         </CardContent>
       </Card>
+
+      <section className="mt-4 grid gap-3 md:grid-cols-2">
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Access Governance</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Enforce SSO sign-in, just-in-time elevation for production operations, and access review cycles.</p>
+            <div className="flex flex-wrap gap-2">
+              <MockActionDialog label="Configure SSO" entity="workspace identity" className="px-4" />
+              <MockActionDialog label="Run Access Review" entity="workspace members" variant="outline" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Automation Credentials</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Manage service credentials for CI/CD and integration automation with scoped permissions.</p>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/api-keys" className="rounded-lg border border-border/70 bg-background px-3 py-2 text-foreground hover:bg-muted">
+                Open API Keys
+              </Link>
+              <MockActionDialog label="Generate Runner Token" entity="automation credential" variant="ghost" />
+            </div>
+          </CardContent>
+        </Card>
+      </section>
     </>
   );
 }

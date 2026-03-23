@@ -5,6 +5,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import { MockActionDialog } from "@/components/prototype/mock-action-dialog";
 import { PageHeader } from "@/components/prototype/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -61,6 +62,34 @@ export default function DatabasesPage() {
             </CardContent>
           </Card>
         ))}
+      </section>
+
+      <section className="mt-4 grid gap-3 md:grid-cols-2">
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Failover Controls</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Define automatic failover thresholds and preferred replica promotion order.</p>
+            <div className="flex flex-wrap gap-2">
+              <MockActionDialog label="Run Failover Test" entity="database cluster" className="px-4" />
+              <MockActionDialog label="Promote Replica" entity="database cluster" variant="outline" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Performance Advisor</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Detect slow queries, storage hotspots, and memory pressure with actionable tuning guidance.</p>
+            <div className="flex flex-wrap gap-2">
+              <MockActionDialog label="Run Query Audit" entity="database performance" variant="outline" />
+              <MockActionDialog label="Apply Safe Tuning" entity="database performance" />
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </>
   );

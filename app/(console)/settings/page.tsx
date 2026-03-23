@@ -1,6 +1,7 @@
 import { Bell, Lock, Palette, SlidersHorizontal } from "lucide-react";
 
 import { PageHeader } from "@/components/prototype/page-header";
+import { MockActionDialog } from "@/components/prototype/mock-action-dialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
@@ -82,6 +83,42 @@ export default function SettingsPage() {
             <p className="rounded-lg border border-border/70 bg-background p-2.5">
               Custom dashboard domain: Coming soon
             </p>
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Resource Quotas</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
+              Enforce per-project CPU caps <Switch defaultChecked />
+            </label>
+            <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
+              Enforce per-project memory caps <Switch defaultChecked />
+            </label>
+            <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
+              Block deployments when quota exceeded <Switch defaultChecked />
+            </label>
+            <MockActionDialog label="Edit Quota Defaults" entity="workspace quota policy" className="px-4" />
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Runtime Security Hardening</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
+              Enforce container rootless mode <Switch defaultChecked />
+            </label>
+            <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
+              Block privileged containers <Switch defaultChecked />
+            </label>
+            <label className="flex items-center justify-between rounded-lg border border-border/70 bg-background p-2.5">
+              Require signed image digests <Switch />
+            </label>
+            <MockActionDialog label="Apply Security Baseline" entity="runtime policy" variant="outline" className="px-4" />
           </CardContent>
         </Card>
       </section>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Clock, ExternalLink, GitCommitHorizontal, Rocket } from "lucide-react";
 
+import { MockActionDialog } from "@/components/prototype/mock-action-dialog";
 import { PageHeader } from "@/components/prototype/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -92,6 +93,18 @@ export default function DeploymentsPage() {
               </div>
             </div>
           ))}
+        </CardContent>
+      </Card>
+
+      <Card className="mt-4 border-border/70 bg-card/90">
+        <CardHeader>
+          <CardTitle className="text-base">Release Controls</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-wrap gap-2">
+          <MockActionDialog label="Rollback Latest Release" entity="deployment timeline" variant="outline" />
+          <MockActionDialog label="Start Blue-Green Deploy" entity="deployment strategy" />
+          <MockActionDialog label="Set Canary Steps" entity="deployment strategy" variant="ghost" />
+          <MockActionDialog label="Enable Auto Abort" entity="deployment safety guard" variant="outline" />
         </CardContent>
       </Card>
     </>

@@ -1,5 +1,6 @@
 import { GitBranch, GitFork, ShieldCheck, Workflow } from "lucide-react";
 
+import { MockActionDialog } from "@/components/prototype/mock-action-dialog";
 import { PageHeader } from "@/components/prototype/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -82,6 +83,34 @@ export default function SourcesPage() {
             </CardContent>
           </Card>
         ))}
+      </section>
+
+      <section className="mt-4 grid gap-3 md:grid-cols-2">
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Webhook Reliability</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Protect source-triggered deployments with signed webhooks, retries, and replay support.</p>
+            <div className="flex flex-wrap gap-2">
+              <MockActionDialog label="Rotate Webhook Secret" entity="source webhook" variant="outline" />
+              <MockActionDialog label="Replay Last Event" entity="source webhook" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70 bg-card/90">
+          <CardHeader>
+            <CardTitle className="text-base">Build Security Gates</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>Require image scans, signed commits, and policy checks before production deployment.</p>
+            <div className="flex flex-wrap gap-2">
+              <MockActionDialog label="Enable Signed Commits" entity="source policy" className="px-4" />
+              <MockActionDialog label="Require Security Scan" entity="build policy" variant="ghost" />
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </>
   );
