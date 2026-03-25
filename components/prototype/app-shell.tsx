@@ -234,7 +234,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <SidebarInset className="bg-muted/25">
         <header className="sticky top-0 z-10 border-b border-border/70 bg-background/95 backdrop-blur">
           <div className="flex h-16 items-center gap-3 px-4 md:px-6">
-            <SidebarTrigger />
+            <SidebarTrigger className="md:hidden" />
 
             <Breadcrumb className="hidden sm:block">
               <BreadcrumbList>
